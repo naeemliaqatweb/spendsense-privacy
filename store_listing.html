@@ -1,0 +1,263 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>SpendSense - App Store Listing Metadata</title>
+    <style>
+        :root {
+            --primary: #00c950;
+            --primary-dark: #00a843;
+            --bg: #09090b;
+            --card-bg: #18181b;
+            --border: #27272a;
+            --text: #fafafa;
+            --text-muted: #a1a1aa;
+        }
+
+        body {
+            font-family: -apple-system, BlinkMacSystemFont, "Segoe UI", Roboto, Helvetica, Arial, sans-serif;
+            background-color: var(--bg);
+            color: var(--text);
+            margin: 0;
+            padding: 40px 20px;
+            line-height: 1.6;
+        }
+
+        .container {
+            max-width: 800px;
+            margin: 0 auto;
+        }
+
+        header {
+            text-align: center;
+            margin-bottom: 40px;
+        }
+
+        h1 {
+            font-size: 2.5rem;
+            font-weight: 800;
+            color: var(--text);
+            margin-bottom: 8px;
+            background: linear-gradient(to right, #00c950, #059669);
+            -webkit-background-clip: text;
+            -webkit-text-fill-color: transparent;
+        }
+
+        .subtitle {
+            color: var(--text-muted);
+            font-size: 1.1rem;
+        }
+
+        .card {
+            background-color: var(--card-bg);
+            border: 1px solid var(--border);
+            border-radius: 16px;
+            padding: 24px;
+            margin-bottom: 24px;
+            box-shadow: 0 10px 15px -3px rgba(0, 0, 0, 0.3);
+        }
+
+        .card-header {
+            display: flex;
+            justify-content: space-between;
+            align-items: center;
+            border-bottom: 1px solid var(--border);
+            padding-bottom: 12px;
+            margin-bottom: 16px;
+        }
+
+        .card-title {
+            font-size: 1.25rem;
+            font-weight: 700;
+            color: var(--primary);
+        }
+
+        .copy-btn {
+            background-color: var(--primary);
+            color: white;
+            border: none;
+            padding: 8px 16px;
+            border-radius: 8px;
+            cursor: pointer;
+            font-weight: 600;
+            font-size: 0.875rem;
+            transition: all 0.2s ease;
+        }
+
+        .copy-btn:hover {
+            background-color: var(--primary-dark);
+        }
+
+        .copy-btn.copied {
+            background-color: #3b82f6;
+        }
+
+        .value-box {
+            background-color: rgba(0, 0, 0, 0.2);
+            border: 1px solid var(--border);
+            border-radius: 8px;
+            padding: 16px;
+            font-size: 1rem;
+            white-space: pre-wrap;
+            word-break: break-word;
+        }
+
+        .tag-container {
+            display: flex;
+            flex-wrap: wrap;
+            gap: 8px;
+            margin-top: 8px;
+        }
+
+        .tag {
+            background-color: var(--border);
+            color: var(--text);
+            padding: 6px 12px;
+            border-radius: 6px;
+            font-size: 0.875rem;
+            font-weight: 500;
+        }
+
+        .meta-grid {
+            display: grid;
+            grid-template-columns: 1fr 1fr;
+            gap: 16px;
+        }
+
+        @media (max-width: 600px) {
+            .meta-grid {
+                grid-template-columns: 1fr;
+            }
+        }
+    </style>
+</head>
+<body>
+    <div class="container">
+        <header>
+            <h1>SpendSense</h1>
+            <p class="subtitle">Oppo App Market & Google Play Store Listing Metadata</p>
+        </header>
+
+        <!-- App Name -->
+        <div class="card">
+            <div class="card-header">
+                <div class="card-title">App Name / Title (Max 30 characters)</div>
+                <button class="copy-btn" onclick="copyText('app-name')">Copy</button>
+            </div>
+            <div class="value-box" id="app-name">SpendSense</div>
+        </div>
+
+        <!-- Short Description -->
+        <div class="card">
+            <div class="card-header">
+                <div class="card-title">Short Description (Max 80 characters)</div>
+                <button class="copy-btn" onclick="copyText('short-desc')">Copy</button>
+            </div>
+            <div class="value-box" id="short-desc">AI-powered grocery budget planner, smart receipt scanner, and price tracker.</div>
+        </div>
+
+        <!-- Full Description -->
+        <div class="card">
+            <div class="card-header">
+                <div class="card-title">Full Description (Oppo App Store & Google Play Console)</div>
+                <button class="copy-btn" onclick="copyText('full-desc')">Copy</button>
+            </div>
+            <div class="value-box" id="full-desc">SpendSense is the ultimate premium budget manager and AI grocery assistant designed to help you track spending, budget smarter, and save on every store run.
+
+Equipped with a powerful offline scanner and dynamic AI analytics, SpendSense helps you instantly organize your grocery receipts, track price histories, and optimize your monthly budget—all while keeping your financial data 100% private.
+
+KEY FEATURES:
+
+📷 SMART RECEIPT SCANNING
+* Instantly scan and read grocery receipts using your device camera.
+* Automatically parses item names, quantities, individual item costs, and total billing.
+* Organizes receipts by date, store, and category for easy review.
+
+💰 PERSONALIZED BUDGET PLANNING
+* Set dynamic daily, weekly, or monthly spending limits.
+* View clean visual progress indicators showing exactly how much budget remains.
+* Restrict items or set smart goals to prevent overspending.
+
+🤖 REAL-TIME AI SPENDING INSIGHTS
+* Powered by Gemini, get instant advice on your spending patterns.
+* Tailored savings recommendations based on your local area and country.
+* Localized suggestions adapt automatically if you are shopping inside Pakistan or abroad (e.g. Dubai, UAE).
+
+📊 ADVANCED ANALYTICS & BREAKDOWNS
+* Beautiful interactive charts showing categories and items.
+* Group expenditures by store (e.g. Carrefour, Lulu, Metro, local marts).
+* View daily and monthly trend graphs to identify where your money goes.
+
+🔒 100% PRIVATE & OFFLINE-FIRST
+* Your data never leaves your phone. SpendSense stores all receipts locally inside secure sandbox storage.
+* Fast, lightweight, and works fully offline.
+
+Download SpendSense today and take complete control of your shopping budget!</div>
+        </div>
+
+        <!-- Keywords -->
+        <div class="card">
+            <div class="card-header">
+                <div class="card-title">Keywords / Tags (Oppo & Play Store)</div>
+                <button class="copy-btn" onclick="copyText('keywords')">Copy</button>
+            </div>
+            <div class="value-box" id="keywords">grocery tracker, budget planner, receipt scanner, price comparison, spend tracker, spending analytics, AI financial assistant, save money, grocery budget, smart shopper</div>
+            <div class="tag-container">
+                <span class="tag">grocery tracker</span>
+                <span class="tag">budget planner</span>
+                <span class="tag">receipt scanner</span>
+                <span class="tag">price comparison</span>
+                <span class="tag">spend tracker</span>
+                <span class="tag">spending analytics</span>
+                <span class="tag">AI financial assistant</span>
+            </div>
+        </div>
+
+        <!-- Additional Metadata -->
+        <div class="meta-grid">
+            <div class="card">
+                <div class="card-header">
+                    <div class="card-title">App Category</div>
+                </div>
+                <div class="value-box">Primary: Finance
+Secondary: Shopping / Utilities</div>
+            </div>
+
+            <div class="card">
+                <div class="card-header">
+                    <div class="card-title">Target Audience</div>
+                </div>
+                <div class="value-box">Ages: 18+ (Adults, Households, Shoppers)
+Content Rating: PEGI 3 / 3+</div>
+            </div>
+        </div>
+
+        <!-- Privacy Policy Link -->
+        <div class="card">
+            <div class="card-header">
+                <div class="card-title">Privacy Policy URL (Required by Oppo & Google Play)</div>
+                <button class="copy-btn" onclick="copyText('privacy-url')">Copy URL</button>
+            </div>
+            <div class="value-box" id="privacy-url">https://naeemliaqatweb.github.io/grocery-app/privacy-policy/</div>
+        </div>
+
+    </div>
+
+    <script>
+        function copyText(elementId) {
+            const text = document.getElementById(elementId).innerText;
+            navigator.clipboard.writeText(text).then(() => {
+                const btn = event.target;
+                const originalText = btn.innerText;
+                btn.innerText = 'Copied!';
+                btn.classList.add('copied');
+                setTimeout(() => {
+                    btn.innerText = originalText;
+                    btn.classList.remove('copied');
+                }, 2000);
+            });
+        }
+    </script>
+</body>
+</html>
